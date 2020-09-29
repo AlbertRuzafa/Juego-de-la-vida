@@ -1,0 +1,10 @@
+C:\Users\Magic\Desktop\Albert\Quart\SIM\Juego_de_la_Vida\Juego_de_la_Vida\bin\Debug\Juego_de_la_Vida.exe.config
+C:\Users\Magic\Desktop\Albert\Quart\SIM\Juego_de_la_Vida\Juego_de_la_Vida\bin\Debug\Juego_de_la_Vida.exe
+C:\Users\Magic\Desktop\Albert\Quart\SIM\Juego_de_la_Vida\Juego_de_la_Vida\bin\Debug\Juego_de_la_Vida.pdb
+C:\Users\Magic\Desktop\Albert\Quart\SIM\Juego_de_la_Vida\Juego_de_la_Vida\obj\Debug\Juego_de_la_Vida.csprojAssemblyReference.cache
+C:\Users\Magic\Desktop\Albert\Quart\SIM\Juego_de_la_Vida\Juego_de_la_Vida\obj\Debug\Juego_de_la_Vida.Form1.resources
+C:\Users\Magic\Desktop\Albert\Quart\SIM\Juego_de_la_Vida\Juego_de_la_Vida\obj\Debug\Juego_de_la_Vida.Properties.Resources.resources
+C:\Users\Magic\Desktop\Albert\Quart\SIM\Juego_de_la_Vida\Juego_de_la_Vida\obj\Debug\Juego_de_la_Vida.csproj.GenerateResource.cache
+C:\Users\Magic\Desktop\Albert\Quart\SIM\Juego_de_la_Vida\Juego_de_la_Vida\obj\Debug\Juego_de_la_Vida.csproj.CoreCompileInputs.cache
+C:\Users\Magic\Desktop\Albert\Quart\SIM\Juego_de_la_Vida\Juego_de_la_Vida\obj\Debug\Juego_de_la_Vida.exe
+C:\Users\Magic\Desktop\Albert\Quart\SIM\Juego_de_la_Vida\Juego_de_la_Vida\obj\Debug\Juego_de_la_Vida.pdb
