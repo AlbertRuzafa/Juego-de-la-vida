@@ -26,11 +26,10 @@ namespace Juego_de_la_Vida
             conjunto.celdas[e.RowIndex, e.ColumnIndex].alive = true;
             
             if (conjunto.celdas[e.RowIndex, e.ColumnIndex].isAlive()== true)
-            { 
-             MyGrid[e.ColumnIndex, e.RowIndex].Style.BackColor = Color.Green;
+            {
+                MyGrid[e.ColumnIndex, e.RowIndex].Style.BackColor = Color.Green;
             }
-           
-            MyGrid.Update();
+            MyGrid.ClearSelection();
         }
 
         private void Dibujar_Click(object sender, EventArgs e) 
@@ -61,21 +60,29 @@ namespace Juego_de_la_Vida
 
         public void DibujarGrid(int filas, int columnas)
         {
+            MyGrid.Rows.Clear();
             MyGrid.ColumnHeadersVisible = false;
-                MyGrid.RowHeadersVisible = false;
-                MyGrid.RowsDefaultCellStyle.SelectionBackColor = Color.Transparent;
-                MyGrid.ColumnCount = columnas;
-                MyGrid.RowCount = filas;
-                for (int col = 0; col < columnas; col++)
-                {
-                    MyGrid.Columns[col].Width = MyGrid.Width / columnas;
-                }
-                for (int row = 0; row < columnas; row++)
-                {
-                    MyGrid.Rows[row].Height = MyGrid.Height / filas;
-                }
+            MyGrid.RowHeadersVisible = false;
+            MyGrid.RowsDefaultCellStyle.BackColor = Color.White;
+            MyGrid.RowsDefaultCellStyle.SelectionBackColor = Color.Transparent;
+            MyGrid.ColumnCount = columnas;
+            MyGrid.RowCount = filas;
+            for (int col = 0; col < columnas; col++)
+            {
+                MyGrid.Columns[col].Width = MyGrid.Width / columnas;
+            }
+            for (int row = 0; row < columnas; row++)
+            {
+                MyGrid.Rows[row].Height = MyGrid.Height / filas;
+            }
         }
 
-
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            int filas = 20;
+            int columnas = 20;
+            DibujarGrid(filas, columnas);
+            conjunto = new ConjuntoCeldas(filas, columnas);
+        }
     }
 }
