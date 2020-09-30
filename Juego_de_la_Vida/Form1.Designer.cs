@@ -122,7 +122,6 @@
             this.Controls.Add(this.Dibujar);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.MyGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
