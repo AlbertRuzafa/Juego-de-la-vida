@@ -65,7 +65,10 @@
             this.MyGrid.AllowUserToDeleteRows = false;
             this.MyGrid.AllowUserToResizeColumns = false;
             this.MyGrid.AllowUserToResizeRows = false;
+            this.MyGrid.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.MyGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.MyGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.MyGrid.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.MyGrid.Location = new System.Drawing.Point(237, 51);
             this.MyGrid.MultiSelect = false;
             this.MyGrid.Name = "MyGrid";
@@ -122,6 +125,7 @@
             this.Controls.Add(this.Dibujar);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.MyGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
