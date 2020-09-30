@@ -2,11 +2,30 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading.Tasks; 
 
 namespace Juego_de_la_Vida
 {
-    class Celda
+    public class Celda
     {
+
+        public Boolean alive = false;
+
+        //Constructor
+        public Celda( Boolean vive)
+        {
+            this.alive = vive;
+        }
+        public Boolean isAlive()
+        {
+            return this.alive;
+        }
+        public void setAlive()
+        {
+            this.alive = true;
+        }
     }
+
+
+
 }
