@@ -25,17 +25,24 @@ namespace Juego_de_la_Vida
         }
         public void ActualizarConjunto(int filas, int columnas)
         {
-            ConjuntoCeldas celdasViejas = new ConjuntoCeldas(filas, columnas);
-            celdasViejas.celdas = this.celdas;
+            Celda[,] celdasViejas = new Celda[filas, columnas];
+            for (int i = 0; i < filas; i++)
+            {
+                for (int j = 0; j < columnas; j++)
+                {
+                    celdasViejas[i, j] = new Celda(celdas[i,j].alive);
+                }
+            }
 
             for (int i = 0; i < filas; i++)
             {
                 for (int j = 0; j < columnas; j++)
                 {
-                    int VecinosVivos = compararCeldas(i, j, filas-1, columnas-1,celdasViejas.celdas);
-                    celdas[i, j].AplicarReglas(VecinosVivos);
+                    int VecinosVivos = compararCeldas(i, j, filas-1, columnas-1,celdas);
+                    celdasViejas[i, j].AplicarReglas(VecinosVivos);
                 }
             }
+            celdas = celdasViejas;
         }
         public int compararCeldas(int i, int j, int maxFilas, int maxColumnas, Celda[,] celdasViejas)
 
