@@ -23,9 +23,9 @@ namespace Juego_de_la_Vida
 
         private void MyGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            conjunto.celdas[e.RowIndex, e.ColumnIndex].alive = true;
+            conjunto.celdas[e.RowIndex, e.ColumnIndex].alive = 1;
             
-            if (conjunto.celdas[e.RowIndex, e.ColumnIndex].isAlive()== true)
+            if (conjunto.celdas[e.RowIndex, e.ColumnIndex].isAlive()== 1)
             {
                 MyGrid[e.ColumnIndex, e.RowIndex].Style.BackColor = Color.Green;
             }
@@ -83,6 +83,29 @@ namespace Juego_de_la_Vida
             int columnas = 20;
             DibujarGrid(filas, columnas);
             conjunto = new ConjuntoCeldas(filas, columnas);
+        }
+
+        private void Step_Click(object sender, EventArgs e)
+        {
+            int filas = MyGrid.RowCount;
+            int columnas = MyGrid.ColumnCount;
+            conjunto.ActualizarConjunto(filas,columnas);
+            for (int i = 0; i < filas; i++)
+            {
+                for (int j = 0; j < columnas; j++)
+                {
+                    if (conjunto.celdas[i, j].alive == 1)
+                    {
+                        MyGrid[i, j].Style.BackColor = Color.Green;
+                    }
+                    else if (conjunto.celdas[i, j].alive == 0)
+                    {
+                        MyGrid[i, j].Style.BackColor = Color.White;
+                    }
+                    MyGrid.ClearSelection();
+                }
+            }
+
         }
     }
 }

@@ -36,6 +36,7 @@
             this.colInput = new System.Windows.Forms.TextBox();
             this.Filaslbl = new System.Windows.Forms.Label();
             this.ColLbl = new System.Windows.Forms.Label();
+            this.Step = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.MyGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,11 +113,23 @@
             this.ColLbl.TabIndex = 5;
             this.ColLbl.Text = "Nº de columnas";
             // 
+            // Step
+            // 
+            this.Step.Image = ((System.Drawing.Image)(resources.GetObject("Step.Image")));
+            this.Step.Location = new System.Drawing.Point(72, 164);
+            this.Step.Name = "Step";
+            this.Step.Size = new System.Drawing.Size(117, 144);
+            this.Step.TabIndex = 6;
+            this.Step.Text = ">>";
+            this.Step.UseVisualStyleBackColor = true;
+            this.Step.Click += new System.EventHandler(this.Step_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Step);
             this.Controls.Add(this.ColLbl);
             this.Controls.Add(this.Filaslbl);
             this.Controls.Add(this.colInput);
@@ -141,6 +154,7 @@
         private System.Windows.Forms.TextBox colInput;
         private System.Windows.Forms.Label Filaslbl;
         private System.Windows.Forms.Label ColLbl;
+        private System.Windows.Forms.Button Step;
     }
 }
 
